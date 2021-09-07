@@ -1,2 +1,6 @@
 # MultiBot
-A multipurpose discord bot *BETA*.
+A multipurpose discord bot *STILL DEVELOPING*.
+----------------------------------------------
+Current features:
+- EmailSpammer
+- ProxyGen
