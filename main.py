@@ -28,6 +28,7 @@ async def help(ctx):
     embed.add_field(name="+all", value="Sends fresh http, https, socks4 and socks5 proxy list", inline=False)
     embed.add_field(name="+email", value="Format - +email [count] [email] [message] - e.g +email 10 email@email.com lol!", inline=False)
     embed.add_field(name="+socials", value="Sends all of the creators socials", inline=False)  
+    embed.add_field(name="+bypass", value="You can bypasss adlinks like linkvertise with this cmd", inline=False)  
     embed.add_field(name="+info", value="Sends info about the bot", inline=False) 
     await ctx.send(embed=embed)
 
@@ -121,7 +122,7 @@ def type(words):
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity = discord.Streaming(name="MultiBot", url="https://www.twitch.tv/egirlraper"))
+    await client.change_presence(activity = discord.Streaming(name="MultiBot", url="https://www.twitch.tv/9xc"))
 count = 10
 @client.command()
 async def email(ctx,count=None,bomb_email=None,*,message=None):
@@ -138,8 +139,8 @@ async def email(ctx,count=None,bomb_email=None,*,message=None):
         second = str(currentDT.second)
         print(f"{Fore.RED}[{Fore.WHITE}{hour}:{minute}:{second}{Fore.RED}]{Fore.GREEN} [Command used] - {ctx.author.name}#{ctx.author.discriminator}:{Fore.RESET} !email {count} {bomb_email} {message}")
         counting = int(0)
-        embed=discord.Embed(title=f"{counting}/{count}", url="https://github.com/egirlraper", color=0xff0000)
-        embed.set_author(name="Email sent!", url="https://github.com/egirlraper")
+        embed=discord.Embed(title=f"{counting}/{count}", url="https://github.com/9xc", color=0xff0000)
+        embed.set_author(name="Email sent!", url="https://github.com/9xc")
         embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/gmail-30-722694.png")
         embed.add_field(name=f'Sending "{message}"', value=f'**to {bomb_email}**', inline=False)
         embed.set_footer(text=f"Requested by {ctx.author.name}#{ctx.author.discriminator}")
@@ -157,14 +158,14 @@ async def email(ctx,count=None,bomb_email=None,*,message=None):
             second = str(currentDT.second)
             print(f"{Fore.RED}[{Fore.WHITE}{hour}:{minute}:{second}{Fore.RED}]{Fore.GREEN} Message Sent:{Fore.RESET} {message} {Fore.GREEN}To {Fore.RESET}{bomb_email}")
             counting = counting + 1
-            embed=discord.Embed(title=f"{counting}/{count}", url="https://github.com/egirlraper", color=0xff0000)
-            embed.set_author(name="Email sent!", url="https://github.com/egirlraper")
+            embed=discord.Embed(title=f"{counting}/{count}", url="https://github.com/9xc", color=0xff0000)
+            embed.set_author(name="Email sent!", url="https://github.com/9xc")
             embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/gmail-30-722694.png")
             embed.add_field(name=f'Sending "{message}"', value=f'**to {bomb_email}**', inline=False)
             embed.set_footer(text=f"Requested by {ctx.author.name}#{ctx.author.discriminator}")
             await msg.edit(embed=embed)
-        embed=discord.Embed(title="Please consider following!", url="https://github.com/egirlraper", color=0xff0000)
-        embed.set_author(name="Done spamming!", url="https://github.com/egirlraper")
+        embed=discord.Embed(title="Please consider following!", url="https://github.com/9xc", color=0xff0000)
+        embed.set_author(name="Done spamming!", url="https://github.com/9xc")
         embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/gmail-30-722694.png")
         await msg.edit(embed=embed)
             
@@ -172,7 +173,7 @@ async def email(ctx,count=None,bomb_email=None,*,message=None):
 async def info(ctx):
     aboutem = discord.Embed(
         title="Some Info About Multibot :)",
-        description="Languages: Python / Json\nVersion: 0.3 [BETA]\nChangelog: Added Socials/Info command\nDeveloper: rookie?1337",
+        description="Languages: Python / Json\nVersion: 0.4 \nChangelog: Added Socials/Info command\nDeveloper: rookie?1337",
         color=discord.Colour.dark_purple()
     )
     await ctx.send(embed = aboutem)   
@@ -185,5 +186,18 @@ async def socials(ctx):
         color=discord.Colour.dark_purple()
     )
     await ctx.send(embed = aboutem) 
-             
+            
+@client.command()
+async def bypass(ctx, arg):
+  r=requests.get('https://bypass.bot.nu/bypass2?url='+arg)
+  a = ('%'+r.text)
+  chunks = a.split(',')
+  dest = chunks[1]
+  stripped = dest.split('"')
+  #await ctx.send(chunks[1])
+  embed = discord.Embed()
+  embed.set_thumbnail(url="https://thumbs.gfycat.com/PlainHonestAzurevase-size_restricted.gif")
+  embed.add_field(name="Bypassed Link:", value=stripped[3], inline=False)
+  await ctx.send(embed=embed)
+            
 client.run(token)
