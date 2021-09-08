@@ -6,12 +6,12 @@ Current features:
 - ProxyGen
 - Info Command
 - Socials Command
-- xxx
+- Adlink Bypasser
 -----------------
 Languages: 
 - Python
 - Json
 -----------------
 Version:
-- v0.3
+- v0.4
 -----------------
