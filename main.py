@@ -29,6 +29,7 @@ async def help(ctx):
     embed.add_field(name="+email", value="Format - +email [count] [email] [message] - e.g +email 10 email@email.com lol!", inline=False)
     embed.add_field(name="+socials", value="Sends all of the creators socials", inline=False)  
     embed.add_field(name="+bypass", value="You can bypasss adlinks like linkvertise with this cmd", inline=False)  
+    embed.add_field(name="+website", value="Brings you to my website", inline=False)  
     embed.add_field(name="+info", value="Sends info about the bot", inline=False) 
     await ctx.send(embed=embed)
 
