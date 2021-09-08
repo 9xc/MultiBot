@@ -4,11 +4,11 @@ A multipurpose discord bot *STILL DEVELOPING*.
 Current features:
 - EmailSpammer
 - ProxyGen
-- xxx
-- xxx
+- Info Command
+- Socials Command
 - xxx
 -----------------
 Languages: 
 - Python
-- xxx
+- Json
 -----------------
