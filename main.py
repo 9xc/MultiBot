@@ -121,9 +121,10 @@ def type(words):
         time.sleep(0.01)
 
 @client.event
-async def on_ready():
-    await client.change_presence(activity = discord.Streaming(name="MultiBot", url="https://www.twitch.tv/9xc"))
+async def on_ready(): 
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"{len(client.guilds)} Servers / +help / Developed By rookie?#1337"))
 count = 10
+
 @client.command()
 async def email(ctx,count=None,bomb_email=None,*,message=None):
     if count == None or bomb_email == None or message == None:
