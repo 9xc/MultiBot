@@ -170,7 +170,7 @@ async def email(ctx,count=None,bomb_email=None,*,message=None):
 async def info(ctx):
     aboutem = discord.Embed(
         title="Some Info About Multibot :)",
-        description="Languages: Python / Json\nVersion: 0.2 [BETA]\nChangelog: Added Socials/Info command\nDeveloper: rookie?1337",
+        description="Languages: Python / Json\nVersion: 0.3 [BETA]\nChangelog: Added Socials/Info command\nDeveloper: rookie?1337",
         color=discord.Colour.dark_purple()
     )
     await ctx.send(embed = aboutem)   
