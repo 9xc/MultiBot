@@ -27,6 +27,8 @@ async def help(ctx):
     embed.add_field(name="+socks5", value="Sends fresh socsk5 proxy list", inline=False)
     embed.add_field(name="+all", value="Sends fresh http, https, socks4 and socks5 proxy list", inline=False)
     embed.add_field(name="+email", value="Format - +email [count] [email] [message] - e.g +email 10 email@email.com lol!", inline=False)
+    embed.add_field(name="+socials", value="Sends all of the creators socials", inline=False)  
+    embed.add_field(name="+info", value="Sends info about the bot", inline=False) 
     await ctx.send(embed=embed)
 
 @client.command()
