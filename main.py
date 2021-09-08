@@ -165,7 +165,14 @@ async def email(ctx,count=None,bomb_email=None,*,message=None):
         embed.set_author(name="Done spamming!", url="https://github.com/egirlraper")
         embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/gmail-30-722694.png")
         await msg.edit(embed=embed)
-        
+ @client.command()
+async def info(ctx):
+    aboutem = discord.Embed(
+        title="Some Info About Multibot :)",
+        description="Languages: Python / Json\nVersion: 0.2 [BETA]\nChangelog: Added Socials/Info command\nDeveloper: rookie?1337",
+        color=discord.Colour.dark_purple()
+    )
+    await ctx.send(embed = aboutem)       
   
              
 client.run(token)
