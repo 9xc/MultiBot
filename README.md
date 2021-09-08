@@ -7,6 +7,7 @@ Current features:
 - Info Command
 - Socials Command
 - Adlink Bypasser
+- WebsiteCommand
 -----------------
 Languages: 
 - Python
