@@ -4,3 +4,4 @@ pip install asyncio
 pip install configparser
 pip install colorama
 pip install datetime
+pip install smtplib
