@@ -120,7 +120,7 @@ init(convert=True)
 os.system("title EmailSpammer!")
 config = ConfigParser()
 
-config.read('setup.ini')
+config.read('cfg.ini')
 
 emale = config.get('SETTINGS', 'email')
 pas = config.get('SETTINGS', 'password')
