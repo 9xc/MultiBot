@@ -1,4 +1,4 @@
-# MultiBot
+# Illuminati Bot
 A multipurpose discord bot *STILL DEVELOPING*.
 ----------------------------------------------
 Current features:
@@ -7,12 +7,19 @@ Current features:
 - Info Command
 - Socials Command
 - Adlink Bypasser
-- WebsiteCommand
+- Ban/Unban Command
+- Dm Command
+- DB Search
+- Kick Command
+- Addrole/remrole Command
+- Ping Command
+- Question Command
+- Whois Command
 -----------------
 Languages: 
 - Python
 - XXX
 -----------------
 Version:
-- v0.4
+- v0.9
 -----------------
