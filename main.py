@@ -12,7 +12,6 @@ from configparser import ConfigParser
 import os
 import sys
 import json
-from colorama import Fore, init
 
 token = "YOURBOTTOKEN"
 
